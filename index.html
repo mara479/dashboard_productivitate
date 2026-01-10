@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard Productivitatea Mea</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+ 
+<div id="startScreen" class="start-screen">
+  <div class="start-card">
+    <h1>Productivitatea Mea</h1>
+    <p>Apasă pe buton pentru a intra în dashboard și a-ți organiza ziua.</p>
+    <button id="startBtn" class="btn-primary start-btn"> Începe</button>
+  </div>
+</div>
+
+
+  
+  <div id="dashboard" class="app hidden">
+    <header>
+      <div class="title-group">
+        <div class="chip">
+          <span class="chip-dot"></span>
+          Live dashboard – azi
+        </div>
+        <h1>Dashboard Productivitate</h1>
+        <p>Gestionează-ți task-urile și obiceiurile.</p>
+      </div>
+      <div class="controls">
+        <button id="themeToggle">
+          Schimbă tema
+        </button>
+        <button class="btn-primary" id="focusBoost">
+          Boost de focus
+        </button>
+      </div>
+    </header>
+
+  
+    <nav class="top-nav">
+      <button id="tabDashboard" class="tab-btn active">Dashboard</button>
+      <button id="tabReviews" class="tab-btn">Review-uri</button>
+    </nav>
+
+    <main>
+    
+      <div id="dashboardContent" class="main-grid">
+      
+        <aside class="panel">
+          <div class="panel-title">
+            <span>Progresul meu zilnic</span>
+            <span id="tasksCountLabel">0 / 0 done</span>
+          </div>
+          <div class="kpi">
+            <h2 id="progressPercent">0%</h2>
+            <small>Ținta mea: completează toate task-urile de azi.</small>
+          </div>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar" id="progressBar"></div>
+          </div>
+
+          <div class="add-form">
+            <strong>Adaugă un task nou</strong>
+            <input id="taskTitleInput" type="text" placeholder="Ex: 30 min de jogging" />
+            <div class="field-row">
+              <select id="taskCategoryInput">
+                <option value="Lucru">Lucru</option>
+                <option value="Învățat" selected>Învățat</option>
+                <option value="Sănătate">Sănătate</option>
+              </select>
+              <input id="taskDeadlineInput" type="time" />
+            </div>
+            <button id="addTaskBtn" class="btn-primary btn-small">
+              <span class="icon">+</span> Adaugă
+            </button>
+          </div>
+        </aside>
+
+        <section class="panel">
+          <div class="tasks-header">
+            <h2>Task-urile de astăzi</h2>
+            <div class="filters">
+              <button class="filter-btn active" data-filter="all">Toate</button>
+              <button class="filter-btn" data-filter="Lucru">Lucru</button>
+              <button class="filter-btn" data-filter="Învățat">Învățat</button>
+              <button class="filter-btn" data-filter="Sănătate">Sănătate</button>
+            </div>
+          </div>
+
+          <div class="tasks-grid" id="tasksGrid">
+        
+          </div>
+        </section>
+      </div>
+
+    
+      <section id="reviewsSection" class="panel hidden reviews-panel">
+        <div class="panel-title">
+          <span>Review-uri despre aplicație</span>
+        </div>
+
+        <div class="review-form">
+          <strong>Lasă un review</strong>
+          <input id="reviewNameInput" type="text" placeholder="Numele tău (opțional)" />
+          <select id="reviewRatingInput">
+            <option value="5">***** - Excelent</option>
+            <option value="4">**** - Foarte bun</option>
+            <option value="3">*** - Bun</option>
+            <option value="2">** - Așa și așa</option>
+            <option value="1">*- Slab</option>
+          </select>
+          <textarea id="reviewTextInput" rows="3" placeholder="Scrie părerea ta aici..."></textarea>
+          <button id="addReviewBtn" class="btn-primary btn-small">
+            Trimite review
+          </button>
+        </div>
+
+        <div class="reviews-list" id="reviewsList">
+        
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal">
+      <div class="modal-header">
+        <div class="modal-title" id="modalTitle">Detalii task</div>
+        <button class="modal-close" id="modalClose">✕</button>
+      </div>
+      <div class="modal-body" id="modalBody">
+    
+      </div>
+      <div class="modal-footer">
+        <button id="modalDoneBtn" class="btn-primary btn-small">Marchează drept complet</button>
+        <button id="modalCancelBtn" class="btn-small">Închide</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
