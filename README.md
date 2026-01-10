@@ -2,7 +2,7 @@
 Dashboard zilnic de productivitate în HTML/CSS/JS
 
 ## Link
-https://mara479.github.io/productivity-dashboard/
+https://mara479.github.io/dashboard-productivitate/
 
 ## Descriere
 Aplicația oferă o interfață modernă pentru organizarea activităților zilnice, fiind destinată îmbunătățirii productivității personale.
