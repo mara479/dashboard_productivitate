@@ -267,7 +267,7 @@ document.addEventListener("DOMContentLoaded", () => {
       div.innerHTML = `
         <div class="review-header">
           <span class="review-name">${rev.name || "Anonim"}</span>
-          <span class="review-rating">${"⭐️".repeat(rev.rating)}</span>
+          <span class="review-rating">${"*".repeat(rev.rating)}</span>
         </div>
         <div class="review-text">
           ${rev.text}
@@ -283,7 +283,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const text = reviewTextInput.value.trim();
 
     if (!text) {
-      alert("Scrie ceva în review 😊");
+      alert("Scrie ceva în review :)");
       return;
     }
 
@@ -316,4 +316,5 @@ document.addEventListener("DOMContentLoaded", () => {
   applyStoredTheme();
   renderTasks();
   renderReviews(); 
+
 });
